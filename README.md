@@ -109,12 +109,13 @@ Each run evaluates in `only_test` mode and writes per-subject metrics to
 
 ### Released checkpoints
 
-This repository ships the two core cross-dataset checkpoints (seed 42):
+This repository ships the two core cross-dataset checkpoints (seed 42), both using the
+**Gated (gated_tf)** expert:
 
-| Setting | Branch | Checkpoint |
-|---------|--------|-----------|
-| PURE → MMPD | gated_tf | `pretrained/PreTrainedModels/PURE_MMPD_DareNet_gated_tf_seed42_Epoch29.pth` |
-| UBFC → MMPD | gated_tf | `pretrained/PreTrainedModels/UBFC_MMPD_DareNet_gated_tf_seed42_Epoch29.pth` |
+| Setting | Checkpoint |
+|---------|-----------|
+| PURE → MMPD | `pretrained/PreTrainedModels/PURE_MMPD_DareNet_gated_tf_seed42_Epoch29.pth` |
+| UBFC → MMPD | `pretrained/PreTrainedModels/UBFC_MMPD_DareNet_gated_tf_seed42_Epoch29.pth` |
 
 Their integrity is listed in `pretrained/PreTrainedModels/CHECKSUMS.txt`.
 
