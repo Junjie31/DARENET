@@ -17,8 +17,12 @@ __pycache__/
 data/
 datasets/
 PreprocessedData/
-PreTrainedModels/
-pretrained/
+
+# Pretrained checkpoints: ignore everything except the two released ones.
+pretrained/PreTrainedModels/*
+!pretrained/PreTrainedModels/PURE_MMPD_DareNet_gated_tf_seed42_Epoch29.pth
+!pretrained/PreTrainedModels/UBFC_MMPD_DareNet_gated_tf_seed42_Epoch29.pth
+!pretrained/PreTrainedModels/CHECKSUMS.txt
 
 # Logs and runs
 *.log
