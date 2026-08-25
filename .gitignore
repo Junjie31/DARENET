@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Checkpoints and model files
+*.pth
+*.ckpt
+*.pt
+*.pth.tar
+
+# Data files (keep code, exclude data)
+*.mat
+*.npz
+*.hdf5
+*.h5
+data/
+datasets/
+PreprocessedData/
+PreTrainedModels/
+pretrained/
+
+# Logs and runs
+*.log
+logs/
+runs/
+experiment_logs/
+
+# Output directories
+outputs/
+outputs_*/
+saved_metrics/
+dumps/
+dumps_*/
+
+# Results
+*.xlsx
+*.csv
+!dataset/BP4D_BigSmall_Subject_Splits/*.csv
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.venv
+env/
+venv/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Temporary
+temp/
+tmp/
+*.tmp
