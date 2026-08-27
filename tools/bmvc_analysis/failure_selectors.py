@@ -17,10 +17,8 @@ from sklearn.metrics import roc_auc_score
 
 logger = logging.getLogger(__name__)
 
-# Tolerance margin for the actionable failure labels (paper Eq.: failure_c =
-# I(e_c > e_g + delta), failure_g = I(e_g > e_c + delta)).  The paper writes the
-# margin as a symbol without a numeric value; DELTA is set here so that the
-# resulting D_full+GBM AUCs reproduce the reported failure_c / failure_g.
+# Tolerance margin (bpm) for the actionable failure labels:
+#   failure_c = I(e_c > e_g + DELTA), failure_g = I(e_g > e_c + DELTA).
 DELTA = 3
 
 try:
