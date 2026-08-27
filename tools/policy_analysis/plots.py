@@ -1,5 +1,5 @@
 """
-Publication-quality plotting for BMVC 2026 failure-aware analysis.
+Publication-quality plotting for the failure-aware policy analysis.
 All figures saved as both .pdf and .png (dpi=300).
 """
 import os, logging

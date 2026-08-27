@@ -49,7 +49,7 @@ DareNet/
 │   ├── gen_configs.py          # regenerate configs with your local data paths
 │   ├── aggregate.py            # aggregate multi-seed results into mean±std
 │   └── dump_policy_windows.py  # per-window dual-expert dump (Sec.4 policy)
-├── tools/bmvc_analysis/     # reliability-policy analysis pipeline (Sec.4)
+├── tools/policy_analysis/     # reliability-policy analysis pipeline (Sec.4)
 ├── reproduce.sh             # reproduce the core cross-dataset results
 └── setup.sh                 # environment setup (conda / uv)
 ```

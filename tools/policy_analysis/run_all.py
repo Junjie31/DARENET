@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-BMVC 2026 Failure-Aware Analysis — Run-All Orchestrator (v2).
+Failure-Aware Policy Analysis — Run-All Orchestrator (v2).
 
 Usage:
-    python tools/bmvc_analysis/run_all.py \
+    python tools/policy_analysis/run_all.py \
         --dump_dir dumps_20260514 \
-        --out_dir outputs_bmvc_v2 \
+        --out_dir outputs_policy_v2 \
         --use_official_errors
 """
 import os, sys, json, logging, argparse
@@ -15,18 +15,18 @@ import pandas as pd
 PROJ_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, PROJ_ROOT)
 
-from tools.bmvc_analysis.io_utils import (load_npz, align_pair, save_table, save_json)
-from tools.bmvc_analysis.feature_engineering import build_feature_table
-from tools.bmvc_analysis.failure_metrics import compute_dataset_table
-from tools.bmvc_analysis.failure_selectors import run_all_selectors
-from tools.bmvc_analysis.abstention import (compute_abstention_table,
+from tools.policy_analysis.io_utils import (load_npz, align_pair, save_table, save_json)
+from tools.policy_analysis.feature_engineering import build_feature_table
+from tools.policy_analysis.failure_metrics import compute_dataset_table
+from tools.policy_analysis.failure_selectors import run_all_selectors
+from tools.policy_analysis.abstention import (compute_abstention_table,
                                              make_abstention_summary)
-from tools.bmvc_analysis.policy_evaluation import evaluate_policies
-from tools.bmvc_analysis.failure_inspection import (export_top_failures,
+from tools.policy_analysis.policy_evaluation import evaluate_policies
+from tools.policy_analysis.failure_inspection import (export_top_failures,
                                                       plot_top_failures)
-from tools.bmvc_analysis.official_vs_recomputed import (load_official_metrics,
+from tools.policy_analysis.official_vs_recomputed import (load_official_metrics,
                                                           compare_official_recomputed)
-from tools.bmvc_analysis.plots import (
+from tools.policy_analysis.plots import (
     plot_error_cdf, plot_disagreement_vs_error, plot_fingerprint_kde,
     plot_subject_scatter, plot_failure_auc_bar, concat_with_label,
     plot_selective_prediction, plot_selective_prediction_all,
@@ -34,13 +34,13 @@ from tools.bmvc_analysis.plots import (
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s [%(name)s] %(levelname)s: %(message)s')
-logger = logging.getLogger('bmvc')
+logger = logging.getLogger('policy')
 
 
 def main():
-    p = argparse.ArgumentParser(description='BMVC 2026 Failure-Aware Analysis v2')
+    p = argparse.ArgumentParser(description='Failure-Aware Policy Analysis v2')
     p.add_argument('--dump_dir', default='dumps_20260514')
-    p.add_argument('--out_dir', default='outputs_bmvc_v2')
+    p.add_argument('--out_dir', default='outputs_policy_v2')
     p.add_argument('--use_official_errors', action='store_true', default=False)
     args = p.parse_args()
 
@@ -297,7 +297,7 @@ def main():
     # Terminal summary
     # =====================================================================
     print("\n" + "=" * 70)
-    print("  BMVC 2026 FAILURE-AWARE ANALYSIS — SUMMARY v2")
+    print("  Failure-Aware Policy Analysis — SUMMARY v2")
     print("=" * 70)
     for ds in ['mmpd', 'pure']:
         if ds not in summary: continue

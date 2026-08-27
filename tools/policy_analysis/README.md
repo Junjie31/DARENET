@@ -1,11 +1,11 @@
-# BMVC 2026 Failure-Aware Analysis Toolkit
+# Failure-Aware Policy Analysis Toolkit
 
 ## Quick Start
 
 ```bash
-cd /home/junjie/Workspace/RhythmMamba_HR_darenet
-conda activate RhythmMamba
-python tools/bmvc_analysis/run_all.py --dump_dir dumps_20260514 --out_dir outputs_bmvc
+cd /path/to/DareNet
+conda activate DareNet
+python tools/policy_analysis/run_all.py --dump_dir dumps/policy --out_dir outputs_policy
 ```
 
 ## Module Overview
@@ -23,7 +23,7 @@ python tools/bmvc_analysis/run_all.py --dump_dir dumps_20260514 --out_dir output
 ## Output Structure
 
 ```
-outputs_bmvc/
+outputs_policy/
   tables/
     features_{mmpd,pure}.csv        # All per-window features
     tail_metrics_{mmpd,pure}.csv    # Failure metrics by method

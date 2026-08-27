@@ -1,5 +1,5 @@
 """
-Failure / tail-risk metrics for BMVC analysis.
+Failure / tail-risk metrics for the policy analysis.
 
 Computes per-expert and per-method MAE, quantiles, and failure rates.
 """

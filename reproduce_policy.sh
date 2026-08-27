@@ -4,7 +4,7 @@
 # Pipeline:
 #   1) dump per-window predictions of BOTH experts (Complex/spectral, Gated/gated_tf)
 #      on the intra test set (MMPD / PURE);
-#   2) run tools/bmvc_analysis/run_all.py to align, build features, fit selectors
+#   2) run tools/policy_analysis/run_all.py to align, build features, fit selectors
 #      (failure-prediction AUC), evaluate routing policies, and compute abstention.
 #
 # The official per-window labels (err_c/err_g/hr_c/hr_g/winner) are loaded from
@@ -55,7 +55,7 @@ echo "===== Step 2: copy official labels next to dumps ====="
 cp dumps/aligned/aligned_mmpd.npz dumps/aligned/aligned_pure.npz "$DUMP_DIR/"
 
 echo "===== Step 3: run policy analysis ====="
-python tools/bmvc_analysis/run_all.py \
+python tools/policy_analysis/run_all.py \
   --dump_dir "$DUMP_DIR" \
   --out_dir "$OUT_DIR" \
   --use_official_errors
