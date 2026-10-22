@@ -130,7 +130,7 @@ Thanks to the authors of [rPPG-Toolbox](https://github.com/ubicomplab/rPPG-Toolb
 
 ```
 @inproceedings{darenet2026,
-  title={DareNet: Domain-Aware Remote Physiological Measurement},
+  title={DARE to Generalize: Domain-Aware Robust Experts and Reliability-Aware Decisions for Cross-Domain rPPG},
   author={Hou, Junjie and Chow, Chong Tong and He, Yudong and Odinaev, Ismoil and Wong, Kwan Long and Chin, Jing Wei and So, Richard H. Y.},
   booktitle={Proceedings of the British Machine Vision Conference (BMVC)},
   year={2026}
